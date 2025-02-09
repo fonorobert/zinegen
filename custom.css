@@ -1,0 +1,50 @@
+@page {
+	/* size: 74mm 105mm; */
+	size: 105mm 148mm;
+	margin: 6mm;
+	border: 1px solid black;
+}
+
+body {
+	padding-left: 6mm;
+	font-family: DejaVuSans, sans-serif;
+	font-size: 12pt;
+	line-height: 2;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 16pt;
+	text-align: center;
+	color: white;
+	background-color: black;
+	margin-bottom: 0;
+}
+
+
+h2 {
+	font-size: 10pt;
+	text-align: right;
+	color: darkgrey;
+	line-height: 1;
+	display: inline-block;
+	float: right;
+}
+
+h3 {
+	font-size: 8pt;
+	text-align: left;
+	color: darkgrey;
+	line-height: 1;
+	display: inline-block;
+}
+
+ul {
+	margin-top: 10mm;
+	margin-left: 0mm;
+	padding-left: 4mm;
+}
+
+ul li {
+	margin-top: 4mm;
+}
