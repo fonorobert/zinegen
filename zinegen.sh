@@ -1,8 +1,23 @@
 #!/usr/bin/env bash
 
-BASEDIR=~/Nextcloud/Documents/checklists
-DIR_OUT=$BASEDIR/build
-CSS_PATH=$BASEDIR/checklistgen/custom.css
+DIR_OUT=./build
+CSS_PATH=./custom.css
+
+while getopts o:s: flag
+do
+    case "${flag}" in
+        o) DIR_OUT=${OPTARG};;
+        s) CSS_PATH=${OPTARG};;
+    esac
+done
+
+shift $((OPTIND - 1))
+
+if [ ! -d $DIR_OUT ]; then
+  mkdir $DIR_OUT
+fi
+
+
 
 ARGS=("$@")
 FILES=${ARGS[@]}
@@ -21,4 +36,5 @@ do
 
 done
 
-pdfjam -o $DIR_OUT/checklists.pdf --nup 2x2 --no-landscape $DIR_OUT/*
+psjoin $DIR_OUT/* > $DIR_OUT/joined.pdf
+psnup -p A4 -4 $DIR_OUT/joined.pdf $DIR_OUT/checklists.pdf
