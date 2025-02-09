@@ -2,18 +2,19 @@
 
 *Based on [checklistgen](https://github.com/fonorobert/checklistgen).*
 
-Shell script and stylesheets wrapping pandoc, weasyprint and pdfjam to generate 6-fold zines on A4 paper in PDF.
+Shell script and stylesheets wrapping pandoc, weasyprint and pdfjam to generate [8-fold zines](https://en.wikibooks.org/wiki/Zine_Making/Putting_pages_together#An_8-sided_zine_from_1_sheet_with_1_cut) (8 A7 sized pages) on a sheet of A4 paper in PDF.
 
 ## Dependencies
 
 - pandoc
 - weasyprint
 - psutils
+- qpdf
 
 To set up depednencies on Mac (with command line tools and Homebrew installed):
 
 ```
-brew install pandoc weasyprint psutils
+brew install pandoc weasyprint psutils qpdf
 ```
 
 ## Usage

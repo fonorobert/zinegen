@@ -50,7 +50,9 @@ do
 done
 
 psjoin $DIR_OUT/temp/* > $DIR_OUT/temp/joined.pdf
-psnup -p A4 -4 $DIR_OUT/temp/joined.pdf $DIR_OUT/output.pdf
+qpdf $DIR_OUT/temp/joined.pdf --pages . 4,3,2,1,5-8 -- $DIR_OUT/temp/reordered.pdf
+qpdf --rotate=+180:1-4 $DIR_OUT/temp/reordered.pdf $DIR_OUT/temp/flipped.pdf --flatten-rotation
+psnup -p A4 -8 $DIR_OUT/temp/flipped.pdf $DIR_OUT/output.pdf
 
 # clean up build artifacts
 rm -r $DIR_OUT/temp
