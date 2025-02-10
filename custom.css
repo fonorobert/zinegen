@@ -1,19 +1,41 @@
 @page {
 	/* size: 74mm 105mm; */
-	/* size: 105mm 148mm; */
-	size: A7;
+	size: 105mm 74mm;
+	/* size: A7; */
 	margin: 5mm;
 	padding: 0mm;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
 
 html {
-	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+	font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+	font-size: 10pt;
+	line-height: 1;
 }
 
+
 body {
+	height: 64mm;
+	width: 95mm;
+
 	padding: 0mm;
 	margin: 0mm;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	text-align: right;
+	position: absolute;
+	top: 0;
+}
+
+h1, h2 {
+	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+	font-weight: 500;
 }
 
 img {
@@ -27,34 +49,12 @@ img, h1, h2, p {
 	margin-right: 0mm;
 }
 
-/* 
-body {
-	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
-	line-height: 2;
-	margin: 0;
-	padding: 0;
+.push-to-top {
+	position: absolute;
+	top: 0;
 }
 
-
-h1 {
-	text-transform: uppercase;
-	text-align: center;
-	color: white;
-	margin-bottom: 0;
+.push-to-bottom {
+	position: absolute;
+	bottom: 0;
 }
-
-
-h2 {
-	text-align: right;
-	color: darkgrey;
-	line-height: 1;
-	display: inline-block;
-	float: right;
-}
-
-h3 {
-	text-align: left;
-	color: darkgrey;
-	line-height: 1;
-	display: inline-block;
-} */
