@@ -51,11 +51,10 @@ do
 	pandoc -o "$DIR_OUT/temp/$FILENAME.pdf" "$FILE" \
 		-s -f markdown --template="$BASE_DIR/template.html" --pdf-engine=weasyprint \
 		-c $CSS_PATH
-	
 
 done
 
-psjoin $DIR_OUT/temp/* > $DIR_OUT/temp/joined.pdf
+psjoin $DIR_OUT/temp/*.pdf > $DIR_OUT/temp/joined.pdf
 qpdf $DIR_OUT/temp/joined.pdf --pages . 4,3,2,1,5-8 -- $DIR_OUT/temp/reordered.pdf
 qpdf --rotate=+180:1-4 $DIR_OUT/temp/reordered.pdf $DIR_OUT/temp/flipped.pdf --flatten-rotation
 psnup -p A4 -8 $DIR_OUT/temp/flipped.pdf $DIR_OUT/output.pdf

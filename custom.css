@@ -2,7 +2,7 @@
 	/* size: 74mm 105mm; */
 	/* size: 105mm 148mm; */
 	size: A7;
-	margin: 3mm;
+	margin: 5mm;
 	padding: 0mm;
 	border: 1px solid black;
 }
@@ -13,6 +13,7 @@ html {
 
 body {
 	padding: 0mm;
+	margin: 0mm;
 }
 
 img {
