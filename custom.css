@@ -1,11 +1,32 @@
 @page {
 	/* size: 74mm 105mm; */
 	/* size: 105mm 148mm; */
-	size: A5;
-	margin: 0mm;
+	size: A7;
+	margin: 3mm;
+	padding: 0mm;
 	border: 1px solid black;
 }
 
+html {
+	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+}
+
+body {
+	padding: 0mm;
+}
+
+img {
+	max-width: 100%;
+}
+
+img, h1, h2, p {
+	padding-left: 0mm;
+	padding-right: 0mm;
+	margin-left: 0mm;
+	margin-right: 0mm;
+}
+
+/* 
 body {
 	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
 	line-height: 2;
@@ -13,13 +34,9 @@ body {
 	padding: 0;
 }
 
-img {
-	margin: 0;
-}
 
 h1 {
 	text-transform: uppercase;
-	font-size: 6rem;
 	text-align: center;
 	color: white;
 	margin-bottom: 0;
@@ -39,4 +56,4 @@ h3 {
 	color: darkgrey;
 	line-height: 1;
 	display: inline-block;
-}
+} */

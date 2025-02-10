@@ -2,18 +2,23 @@
 
 # set defaults
 
-DIR_OUT=./build
-CSS_PATH=./custom.css
+BASE_DIR=.
+
 
 # get options
 
-while getopts o:s: flag
+while getopts d: flag
 do
     case "${flag}" in
-        o) DIR_OUT=${OPTARG};;
-        s) CSS_PATH=${OPTARG};;
+		d) BASE_DIR=${OPTARG};;
+        # o) DIR_OUT=${OPTARG};;
+        # s) CSS_PATH=${OPTARG};;
     esac
 done
+
+DIR_OUT=$BASE_DIR/build
+CSS_PATH=$BASE_DIR/custom.css
+
 
 # remove flags so arg list is only input files
 shift $((OPTIND - 1))
@@ -44,8 +49,9 @@ do
 	FILENAME="${FILENAME%.*}"
 
 	pandoc -o "$DIR_OUT/temp/$FILENAME.pdf" "$FILE" \
-		-s -f markdown --pdf-engine=weasyprint \
-		--pdf-engine-opt="--stylesheet=$CSS_PATH"
+		-s -f markdown --template="$BASE_DIR/template.html" --pdf-engine=weasyprint \
+		-c $CSS_PATH
+	
 
 done
 
