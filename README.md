@@ -20,10 +20,14 @@ brew install pandoc weasyprint psutils qpdf
 ## Usage
 
 ```
-zinegen -o /path/to/build/location -s /path/to/css/stylesheet FILES-TO-BUILD
+zinegen -d /path/to/zinegen/base/directory FILES-TO-BUILD
 ```
 
--o defaults to `./build` and -s to `./custom.css` (relative to the folder where the script is ran in)
+example:
+
+```
+zinegen -d /Volumes/fr-air-ext/projects/zinegen ./*.md
+```
 
 **Note:** run the script in the root of the folder that contains your md files. This ensures that image inclusions will be run relative to your source folder.
 
